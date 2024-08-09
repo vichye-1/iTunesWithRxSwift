@@ -12,8 +12,7 @@
 		EFCB8CC52C65AC86004E4C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */; };
 		EFCB8CC82C65AC86004E4C95 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CC72C65AC86004E4C95 /* Base */; };
 		EFCB8CD02C65ACF4004E4C95 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CCF2C65ACF4004E4C95 /* .gitignore */; };
-		EFCB8CD22C65AD72004E4C95 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CD12C65AD72004E4C95 /* APIKey.swift */; };
-		EFCB8CD42C65AEDA004E4C95 /* StartSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */; };
+		EFCB8CD42C65AEDA004E4C95 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CD32C65AEDA004E4C95 /* SearchViewController.swift */; };
 		EFCB8CDF2C65B406004E4C95 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CDE2C65B406004E4C95 /* SnapKit */; };
 		EFCB8CE22C65B41E004E4C95 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CE12C65B41E004E4C95 /* RxCocoa */; };
 		EFCB8CE42C65B41E004E4C95 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CE32C65B41E004E4C95 /* RxSwift */; };
@@ -23,6 +22,12 @@
 		EFCB8CEF2C65B9B8004E4C95 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */; };
 		EFCB8CF32C65BA61004E4C95 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CF22C65BA61004E4C95 /* Strings.swift */; };
 		EFCB8CF62C65C513004E4C95 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CF52C65C513004E4C95 /* IQKeyboardManagerSwift */; };
+		EFCB8CF82C65DF77004E4C95 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CF72C65DF77004E4C95 /* SearchTableViewCell.swift */; };
+		EFCB8CFA2C65E309004E4C95 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CF92C65E309004E4C95 /* SearchViewModel.swift */; };
+		EFCB8CFC2C65E683004E4C95 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CFB2C65E683004E4C95 /* ReuseIdentifierProtocol.swift */; };
+		EFCB8CFF2C65E6A9004E4C95 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */; };
+		EFCB8D012C665672004E4C95 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D002C665672004E4C95 /* Search.swift */; };
+		EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +38,17 @@
 		EFCB8CC72C65AC86004E4C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFCB8CC92C65AC86004E4C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFCB8CCF2C65ACF4004E4C95 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		EFCB8CD12C65AD72004E4C95 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchViewController.swift; sourceTree = "<group>"; };
+		EFCB8CD32C65AEDA004E4C95 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		EFCB8CEC2C65B95C004E4C95 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		EFCB8CF22C65BA61004E4C95 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		EFCB8CF72C65DF77004E4C95 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		EFCB8CF92C65E309004E4C95 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EFCB8CFB2C65E683004E4C95 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		EFCB8D002C665672004E4C95 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,28 +87,32 @@
 		EFCB8CBA2C65AC85004E4C95 /* iTunesWithRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB8CFD2C65E69F004E4C95 /* Extension */,
 				EFCB8CF12C65BA4E004E4C95 /* Constant */,
 				EFCB8CEB2C65B951004E4C95 /* Custom */,
 				EFCB8CE82C65B6A4004E4C95 /* Protocol */,
-				EFCB8CD52C65AEE6004E4C95 /* StartSearch */,
+				EFCB8CD52C65AEE6004E4C95 /* Search */,
 				EFCB8CD62C65AF85004E4C95 /* Base */,
 				EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */,
 				EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */,
 				EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */,
 				EFCB8CC62C65AC86004E4C95 /* LaunchScreen.storyboard */,
 				EFCB8CC92C65AC86004E4C95 /* Info.plist */,
-				EFCB8CD12C65AD72004E4C95 /* APIKey.swift */,
 				EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */,
 			);
 			path = iTunesWithRxSwift;
 			sourceTree = "<group>";
 		};
-		EFCB8CD52C65AEE6004E4C95 /* StartSearch */ = {
+		EFCB8CD52C65AEE6004E4C95 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */,
+				EFCB8CD32C65AEDA004E4C95 /* SearchViewController.swift */,
+				EFCB8CF72C65DF77004E4C95 /* SearchTableViewCell.swift */,
+				EFCB8CF92C65E309004E4C95 /* SearchViewModel.swift */,
+				EFCB8D002C665672004E4C95 /* Search.swift */,
+				EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */,
 			);
-			path = StartSearch;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		EFCB8CD62C65AF85004E4C95 /* Base */ = {
@@ -112,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */,
+				EFCB8CFB2C65E683004E4C95 /* ReuseIdentifierProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -130,6 +145,14 @@
 				EFCB8CF22C65BA61004E4C95 /* Strings.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		EFCB8CFD2C65E69F004E4C95 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,11 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCB8D012C665672004E4C95 /* Search.swift in Sources */,
+				EFCB8CFF2C65E6A9004E4C95 /* UIView+.swift in Sources */,
+				EFCB8CF82C65DF77004E4C95 /* SearchTableViewCell.swift in Sources */,
 				EFCB8CEF2C65B9B8004E4C95 /* DummyViewController.swift in Sources */,
-				EFCB8CD42C65AEDA004E4C95 /* StartSearchViewController.swift in Sources */,
+				EFCB8CD42C65AEDA004E4C95 /* SearchViewController.swift in Sources */,
 				EFCB8CF32C65BA61004E4C95 /* Strings.swift in Sources */,
 				EFCB8CBC2C65AC85004E4C95 /* AppDelegate.swift in Sources */,
-				EFCB8CD22C65AD72004E4C95 /* APIKey.swift in Sources */,
+				EFCB8CFA2C65E309004E4C95 /* SearchViewModel.swift in Sources */,
+				EFCB8CFC2C65E683004E4C95 /* ReuseIdentifierProtocol.swift in Sources */,
+				EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */,
 				EFCB8CED2C65B95C004E4C95 /* TabBarController.swift in Sources */,
 				EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */,
 				EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */,

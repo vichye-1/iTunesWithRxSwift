@@ -10,22 +10,42 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-final class StartSearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
     
     private let searchLabel = UILabel()
     private let searchBar = UISearchBar()
-
+    private lazy var tableView = UITableView()
+    private let viewModel = SearchViewModel()
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureHierarchy()
         configureLayout()
         configureUI()
+        bind()
+        tableView.rowHeight = 120
+    }
+    
+    private func bind() {
+        let input = SearchViewModel.Input(
+            searchButtonTap: searchBar.rx.searchButtonClicked.asObservable(), 
+            searchText: searchBar.rx.text.orEmpty.asObservable()
+        )
+        let output = viewModel.transform(input: input)
+        
+        input.searchButtonTap
+            .subscribe(with: self) { owner, _ in
+                print("뷰컨트롤러 서치바 클릭 인식")
+            }
+            .disposed(by: disposeBag)
+        
     }
 }
 
-extension StartSearchViewController: BaseProtocol {
+extension SearchViewController: BaseProtocol {
     func configureHierarchy() {
-        [searchLabel, searchBar].forEach { view.addSubview($0) }
+        [searchLabel, searchBar, tableView].forEach { view.addSubview($0) }
     }
     
     func configureLayout() {
@@ -39,6 +59,10 @@ extension StartSearchViewController: BaseProtocol {
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
             make.height.equalTo(44)
         }
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom)
+            make.horizontalEdges.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
     }
     
     func configureUI() {
@@ -47,7 +71,6 @@ extension StartSearchViewController: BaseProtocol {
         searchLabel.font = .boldSystemFont(ofSize: 32)
         searchLabel.text = "검색"
         
-        
+        tableView.backgroundColor = .systemGray
     }
-    
 }

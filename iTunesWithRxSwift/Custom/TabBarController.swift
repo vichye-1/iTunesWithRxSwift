@@ -23,7 +23,7 @@ final class TabBarController: UITabBarController {
         let arcade = UINavigationController(rootViewController: DummyViewController())
         arcade.tabBarItem = UITabBarItem(title: Strings.TabBarTitle.arcade, image: UIImage(systemName: "star"), tag: 3)
         
-        let search = UINavigationController(rootViewController: StartSearchViewController())
+        let search = UINavigationController(rootViewController: SearchViewController())
         search.tabBarItem = UITabBarItem(title: Strings.TabBarTitle.search, image: UIImage(systemName: "magnifyingglass"), tag: 4)
         
         setViewControllers([today, game, app, arcade, search], animated: true)
