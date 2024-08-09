@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DummyViewController.swift
 //  iTunesWithRxSwift
 //
 //  Created by 양승혜 on 8/9/24.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class DummyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
     }
-
-
 }
-

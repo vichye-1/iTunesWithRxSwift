@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		EFCB8CBC2C65AC85004E4C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */; };
 		EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */; };
-		EFCB8CC02C65AC85004E4C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CBF2C65AC85004E4C95 /* ViewController.swift */; };
 		EFCB8CC52C65AC86004E4C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */; };
 		EFCB8CC82C65AC86004E4C95 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CC72C65AC86004E4C95 /* Base */; };
 		EFCB8CD02C65ACF4004E4C95 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EFCB8CCF2C65ACF4004E4C95 /* .gitignore */; };
 		EFCB8CD22C65AD72004E4C95 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CD12C65AD72004E4C95 /* APIKey.swift */; };
+		EFCB8CD42C65AEDA004E4C95 /* StartSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */; };
+		EFCB8CDF2C65B406004E4C95 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CDE2C65B406004E4C95 /* SnapKit */; };
+		EFCB8CE22C65B41E004E4C95 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CE12C65B41E004E4C95 /* RxCocoa */; };
+		EFCB8CE42C65B41E004E4C95 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CE32C65B41E004E4C95 /* RxSwift */; };
+		EFCB8CE72C65B438004E4C95 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EFCB8CE62C65B438004E4C95 /* Kingfisher */; };
+		EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */; };
+		EFCB8CED2C65B95C004E4C95 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CEC2C65B95C004E4C95 /* TabBarController.swift */; };
+		EFCB8CEF2C65B9B8004E4C95 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */; };
+		EFCB8CF32C65BA61004E4C95 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CF22C65BA61004E4C95 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EFCB8CB82C65AC85004E4C95 /* iTunesWithRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesWithRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFCB8CBF2C65AC85004E4C95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFCB8CC72C65AC86004E4C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFCB8CC92C65AC86004E4C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFCB8CCF2C65ACF4004E4C95 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		EFCB8CD12C65AD72004E4C95 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartSearchViewController.swift; sourceTree = "<group>"; };
+		EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		EFCB8CEC2C65B95C004E4C95 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		EFCB8CF22C65BA61004E4C95 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCB8CE72C65B438004E4C95 /* Kingfisher in Frameworks */,
+				EFCB8CE42C65B41E004E4C95 /* RxSwift in Frameworks */,
+				EFCB8CE22C65B41E004E4C95 /* RxCocoa in Frameworks */,
+				EFCB8CDF2C65B406004E4C95 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,15 +75,59 @@
 		EFCB8CBA2C65AC85004E4C95 /* iTunesWithRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB8CF12C65BA4E004E4C95 /* Constant */,
+				EFCB8CEB2C65B951004E4C95 /* Custom */,
+				EFCB8CE82C65B6A4004E4C95 /* Protocol */,
+				EFCB8CD52C65AEE6004E4C95 /* StartSearch */,
+				EFCB8CD62C65AF85004E4C95 /* Base */,
 				EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */,
 				EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */,
-				EFCB8CBF2C65AC85004E4C95 /* ViewController.swift */,
 				EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */,
 				EFCB8CC62C65AC86004E4C95 /* LaunchScreen.storyboard */,
 				EFCB8CC92C65AC86004E4C95 /* Info.plist */,
 				EFCB8CD12C65AD72004E4C95 /* APIKey.swift */,
+				EFCB8CEE2C65B9B8004E4C95 /* DummyViewController.swift */,
 			);
 			path = iTunesWithRxSwift;
+			sourceTree = "<group>";
+		};
+		EFCB8CD52C65AEE6004E4C95 /* StartSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CD32C65AEDA004E4C95 /* StartSearchViewController.swift */,
+			);
+			path = StartSearch;
+			sourceTree = "<group>";
+		};
+		EFCB8CD62C65AF85004E4C95 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EFCB8CE82C65B6A4004E4C95 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EFCB8CEB2C65B951004E4C95 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CEC2C65B95C004E4C95 /* TabBarController.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		EFCB8CF12C65BA4E004E4C95 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CF22C65BA61004E4C95 /* Strings.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +146,12 @@
 			dependencies = (
 			);
 			name = iTunesWithRxSwift;
+			packageProductDependencies = (
+				EFCB8CDE2C65B406004E4C95 /* SnapKit */,
+				EFCB8CE12C65B41E004E4C95 /* RxCocoa */,
+				EFCB8CE32C65B41E004E4C95 /* RxSwift */,
+				EFCB8CE62C65B438004E4C95 /* Kingfisher */,
+			);
 			productName = iTunesWithRxSwift;
 			productReference = EFCB8CB82C65AC85004E4C95 /* iTunesWithRxSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +180,11 @@
 				Base,
 			);
 			mainGroup = EFCB8CAF2C65AC85004E4C95;
+			packageReferences = (
+				EFCB8CDD2C65B406004E4C95 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EFCB8CE02C65B41E004E4C95 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				EFCB8CE52C65B438004E4C95 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = EFCB8CB92C65AC85004E4C95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,9 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCB8CC02C65AC85004E4C95 /* ViewController.swift in Sources */,
+				EFCB8CEF2C65B9B8004E4C95 /* DummyViewController.swift in Sources */,
+				EFCB8CD42C65AEDA004E4C95 /* StartSearchViewController.swift in Sources */,
+				EFCB8CF32C65BA61004E4C95 /* Strings.swift in Sources */,
 				EFCB8CBC2C65AC85004E4C95 /* AppDelegate.swift in Sources */,
 				EFCB8CD22C65AD72004E4C95 /* APIKey.swift in Sources */,
+				EFCB8CED2C65B95C004E4C95 /* TabBarController.swift in Sources */,
+				EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */,
 				EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +440,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFCB8CDD2C65B406004E4C95 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		EFCB8CE02C65B41E004E4C95 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		EFCB8CE52C65B438004E4C95 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFCB8CDE2C65B406004E4C95 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFCB8CDD2C65B406004E4C95 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		EFCB8CE12C65B41E004E4C95 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFCB8CE02C65B41E004E4C95 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		EFCB8CE32C65B41E004E4C95 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFCB8CE02C65B41E004E4C95 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		EFCB8CE62C65B438004E4C95 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFCB8CE52C65B438004E4C95 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFCB8CB02C65AC85004E4C95 /* Project object */;
 }
