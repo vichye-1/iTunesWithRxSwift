@@ -34,12 +34,9 @@ final class SearchViewController: UIViewController {
         )
         let output = viewModel.transform(input: input)
         
-        input.searchButtonTap
-            .subscribe(with: self) { owner, _ in
-                print("뷰컨트롤러 서치바 클릭 인식")
-            }
+        NetworkManager.shared.calliTunes(term: "kakao")
+            .subscribe()
             .disposed(by: disposeBag)
-        
     }
 }
 

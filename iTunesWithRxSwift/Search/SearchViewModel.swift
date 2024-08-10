@@ -22,7 +22,13 @@ final class SearchViewModel {
     }
     
     func transform(input: Input) -> Output {
-        let dummy = Observable.just([iTunesResult(trackId: 123, trackName: "12313", artworkUrl60: "323425")])
+        let searchResults = input.searchButtonTap
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .withLatestFrom(input.searchText)
+            .distinctUntilChanged()
+            .flatMapLatest { query in
+                NetworkManager.shared.calliTunes(term: query)
+            }
             .asDriver(onErrorJustReturn: [])
         
         input.searchButtonTap
@@ -38,6 +44,6 @@ final class SearchViewModel {
             }
             .disposed(by: disposeBag)
         
-        return Output(iTunesList: dummy)
+        return Output(iTunesList: searchResults)
     }
 }
