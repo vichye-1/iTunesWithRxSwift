@@ -16,4 +16,7 @@ struct iTunesResult: Decodable {
     let trackId: Int
     let trackName: String
     let artworkUrl60: String
+    let screenshotUrls: [String]
+    let genres: [String]
+    let sellerName: String
 }
