@@ -89,6 +89,7 @@
 		EFCB8CBA2C65AC85004E4C95 /* iTunesWithRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EFCB8D0A2C690909004E4C95 /* Network */,
 				EFCB8CFD2C65E69F004E4C95 /* Extension */,
 				EFCB8CF12C65BA4E004E4C95 /* Constant */,
 				EFCB8CEB2C65B951004E4C95 /* Custom */,
@@ -108,11 +109,10 @@
 		EFCB8CD52C65AEE6004E4C95 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				EFCB8CD32C65AEDA004E4C95 /* SearchViewController.swift */,
-				EFCB8CF72C65DF77004E4C95 /* SearchTableViewCell.swift */,
-				EFCB8CF92C65E309004E4C95 /* SearchViewModel.swift */,
-				EFCB8D002C665672004E4C95 /* Search.swift */,
-				EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */,
+				EFCB8D092C6908E1004E4C95 /* ViewModel */,
+				EFCB8D082C6908D9004E4C95 /* Cell */,
+				EFCB8D072C6908D2004E4C95 /* ViewController */,
+				EFCB8D062C6908C9004E4C95 /* Model */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -156,6 +156,46 @@
 				EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EFCB8D062C6908C9004E4C95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8D002C665672004E4C95 /* Search.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EFCB8D072C6908D2004E4C95 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CD32C65AEDA004E4C95 /* SearchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EFCB8D082C6908D9004E4C95 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CF72C65DF77004E4C95 /* SearchTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EFCB8D092C6908E1004E4C95 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8CF92C65E309004E4C95 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFCB8D0A2C690909004E4C95 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
