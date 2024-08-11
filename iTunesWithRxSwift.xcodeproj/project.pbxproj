@@ -28,6 +28,7 @@
 		EFCB8CFF2C65E6A9004E4C95 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */; };
 		EFCB8D012C665672004E4C95 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D002C665672004E4C95 /* Search.swift */; };
 		EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */; };
+		EFCB8D052C685DBB004E4C95 /* UIButton.Configuration+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		EFCB8D002C665672004E4C95 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton.Configuration+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCB8CFE2C65E6A9004E4C95 /* UIView+.swift */,
+				EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				EFCB8CFC2C65E683004E4C95 /* ReuseIdentifierProtocol.swift in Sources */,
 				EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */,
 				EFCB8CED2C65B95C004E4C95 /* TabBarController.swift in Sources */,
+				EFCB8D052C685DBB004E4C95 /* UIButton.Configuration+.swift in Sources */,
 				EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */,
 				EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */,
 			);

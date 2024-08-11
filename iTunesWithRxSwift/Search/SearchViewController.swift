@@ -24,15 +24,21 @@ final class SearchViewController: UIViewController {
         configureLayout()
         configureUI()
         bind()
-        tableView.rowHeight = 120
     }
     
     private func bind() {
         let input = SearchViewModel.Input(
-            searchButtonTap: searchBar.rx.searchButtonClicked.asObservable(), 
+            searchButtonTap: searchBar.rx.searchButtonClicked.asObservable(),
             searchText: searchBar.rx.text.orEmpty.asObservable()
         )
         let output = viewModel.transform(input: input)
+        
+        output.iTunesList
+            .drive(tableView.rx.items(cellIdentifier: SearchTableViewCell.identifier, cellType: SearchTableViewCell.self)) { index, item, cell in
+                cell.configure(item: item)
+            }
+            .disposed(by: disposeBag)
+        
         
         NetworkManager.shared.calliTunes(term: "kakao")
             .subscribe()
@@ -68,6 +74,8 @@ extension SearchViewController: BaseProtocol {
         searchLabel.font = .boldSystemFont(ofSize: 32)
         searchLabel.text = "검색"
         
+        tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         tableView.backgroundColor = .systemGray
+        tableView.rowHeight = 120
     }
 }
