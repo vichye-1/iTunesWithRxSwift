@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class SearchTableViewCell: UITableViewCell {
+final class SearchTableViewCell: UITableViewCell {
     lazy var iconImageView = UIImageView()
     lazy var screenshotImageView1 = UIImageView()
     lazy var screenshotImageView2 = UIImageView()

@@ -29,6 +29,7 @@
 		EFCB8D012C665672004E4C95 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D002C665672004E4C95 /* Search.swift */; };
 		EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */; };
 		EFCB8D052C685DBB004E4C95 /* UIButton.Configuration+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */; };
+		EFCB8D0D2C697D58004E4C95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		EFCB8D002C665672004E4C95 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton.Configuration+.swift"; sourceTree = "<group>"; };
+		EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				EFCB8CEB2C65B951004E4C95 /* Custom */,
 				EFCB8CE82C65B6A4004E4C95 /* Protocol */,
 				EFCB8CD52C65AEE6004E4C95 /* Search */,
+				EFCB8D0B2C697D43004E4C95 /* Detail */,
 				EFCB8CD62C65AF85004E4C95 /* Base */,
 				EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */,
 				EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */,
@@ -198,6 +201,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		EFCB8D0B2C697D43004E4C95 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,6 +305,7 @@
 				EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */,
 				EFCB8CED2C65B95C004E4C95 /* TabBarController.swift in Sources */,
 				EFCB8D052C685DBB004E4C95 /* UIButton.Configuration+.swift in Sources */,
+				EFCB8D0D2C697D58004E4C95 /* DetailViewController.swift in Sources */,
 				EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */,
 				EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */,
 			);

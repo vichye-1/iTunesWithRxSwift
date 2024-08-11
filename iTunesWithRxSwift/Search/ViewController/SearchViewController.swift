@@ -38,6 +38,19 @@ final class SearchViewController: UIViewController {
                 cell.configure(item: item)
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(iTunesResult.self)
+            .subscribe { [weak self] selectedItem in
+                self?.navigateToDetail(item: selectedItem)
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func navigateToDetail(item: iTunesResult) {
+        let detailVC = DetailViewController()
+        detailVC.iconImage = item.artworkUrl60
+        
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
