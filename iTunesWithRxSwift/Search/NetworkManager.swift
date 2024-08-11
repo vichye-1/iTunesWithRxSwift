@@ -59,7 +59,6 @@ final class NetworkManager {
             task.resume()
             return Disposables.create()
         }
-            .debug("아이튠스 조회")
         return result
     }
 }

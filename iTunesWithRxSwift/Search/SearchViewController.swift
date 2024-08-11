@@ -38,11 +38,6 @@ final class SearchViewController: UIViewController {
                 cell.configure(item: item)
             }
             .disposed(by: disposeBag)
-        
-        
-        NetworkManager.shared.calliTunes(term: "kakao")
-            .subscribe()
-            .disposed(by: disposeBag)
     }
 }
 
