@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class DetailViewController: UIViewController {
+final class DetailViewController: UIViewController {
     
     var iconImage: String?
     
