@@ -13,15 +13,25 @@ import SnapKit
 
 class SearchTableViewCell: UITableViewCell {
     lazy var iconImageView = UIImageView()
+    lazy var screenshotImageView1 = UIImageView()
+    lazy var screenshotImageView2 = UIImageView()
+    lazy var screenshotImageView3 = UIImageView()
     let titleLabel = UILabel()
     let downLoadButton = UIButton()
     let starLabel = UILabel()
     let companyLabel = UILabel()
     let genreLabel = UILabel()
-    lazy var stackView: UIStackView = {
+    lazy var labelStackView: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [starLabel, companyLabel, genreLabel])
         stack.axis = .horizontal
         stack.distribution = .fill
+        stack.spacing = 4
+        return stack
+    }()
+    lazy var screenshotStackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [screenshotImageView1, screenshotImageView2, screenshotImageView3])
+        stack.axis = .horizontal
+        stack.distribution = .fillEqually
         stack.spacing = 4
         return stack
     }()
@@ -47,12 +57,16 @@ class SearchTableViewCell: UITableViewCell {
         } else {
             starLabel.text = "별점 없음"
         }
+        
+        screenshotImageView1.kf.setImage(with: URL(string: item.screenshotUrls[0]))
+        screenshotImageView2.kf.setImage(with: URL(string: item.screenshotUrls[1]))
+        screenshotImageView3.kf.setImage(with: URL(string: item.screenshotUrls[2]))
     }
 }
 
 extension SearchTableViewCell: BaseProtocol {
     func configureHierarchy() {
-        [iconImageView, titleLabel, downLoadButton, stackView].forEach { contentView.addSubview($0) }
+        [iconImageView, titleLabel, downLoadButton, labelStackView, screenshotStackView].forEach { contentView.addSubview($0) }
     }
     
     func configureLayout() {
@@ -72,11 +86,17 @@ extension SearchTableViewCell: BaseProtocol {
             make.width.equalTo(60)
             make.height.equalTo(32)
         }
-        stackView.snp.makeConstraints { make in
+        labelStackView.snp.makeConstraints { make in
             make.top.equalTo(iconImageView.snp.bottom).offset(4)
             make.leading.equalTo(iconImageView)
             make.trailing.equalTo(downLoadButton)
             make.height.equalTo(24)
+        }
+        screenshotStackView.snp.makeConstraints { make in
+            make.top.equalTo(labelStackView.snp.bottom).offset(4)
+            make.leading.equalTo(iconImageView)
+            make.trailing.equalTo(downLoadButton)
+            make.bottom.equalToSuperview().inset(8)
         }
     }
     
