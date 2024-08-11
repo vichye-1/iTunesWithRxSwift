@@ -49,6 +49,8 @@ final class SearchViewController: UIViewController {
     private func navigateToDetail(item: iTunesResult) {
         let detailVC = DetailViewController()
         detailVC.iconImage = item.artworkUrl60
+        detailVC.appTitle = item.trackName
+        detailVC.companyName = item.sellerName
         
         navigationController?.pushViewController(detailVC, animated: true)
     }
