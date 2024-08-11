@@ -98,7 +98,6 @@
 				EFCB8CE82C65B6A4004E4C95 /* Protocol */,
 				EFCB8CD52C65AEE6004E4C95 /* Search */,
 				EFCB8D0B2C697D43004E4C95 /* Detail */,
-				EFCB8CD62C65AF85004E4C95 /* Base */,
 				EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */,
 				EFCB8CBD2C65AC85004E4C95 /* SceneDelegate.swift */,
 				EFCB8CC42C65AC86004E4C95 /* Assets.xcassets */,
@@ -118,13 +117,6 @@
 				EFCB8D062C6908C9004E4C95 /* Model */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		EFCB8CD62C65AF85004E4C95 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		EFCB8CE82C65B6A4004E4C95 /* Protocol */ = {
