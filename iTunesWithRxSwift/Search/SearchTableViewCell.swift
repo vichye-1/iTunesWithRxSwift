@@ -126,6 +126,12 @@ extension SearchTableViewCell: BaseProtocol {
         genreLabel.font = .systemFont(ofSize: 13)
         genreLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         genreLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        
+        [screenshotImageView1, screenshotImageView2, screenshotImageView3].forEach { imageView in
+            imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
+            imageView.layer.cornerRadius = 8
+        }
     }
     
     
