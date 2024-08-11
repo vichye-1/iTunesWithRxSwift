@@ -40,6 +40,13 @@ class SearchTableViewCell: UITableViewCell {
     func configure(item: iTunesResult) {
         iconImageView.kf.setImage(with: URL(string: item.artworkUrl60))
         titleLabel.text = item.trackName
+        companyLabel.text = item.sellerName
+        genreLabel.text = item.genres[0]
+        if let rating = item.averageUserRating {
+            starLabel.text = String(format: "★ %.1f", rating)
+        } else {
+            starLabel.text = "별점 없음"
+        }
     }
 }
 
@@ -89,16 +96,13 @@ extension SearchTableViewCell: BaseProtocol {
         downLoadButton.configuration = .download
 
         starLabel.textAlignment = .left
-        starLabel.text = "★ 4.7"
         starLabel.textColor = .lightGray
         starLabel.font = .systemFont(ofSize: 13)
         
-        companyLabel.text = "kakao Corp."
         companyLabel.textAlignment = .center
         companyLabel.textColor = .lightGray
         companyLabel.font = .systemFont(ofSize: 13)
         
-        genreLabel.text = "navigation"
         genreLabel.textAlignment = .right
         genreLabel.textColor = .lightGray
         genreLabel.font = .systemFont(ofSize: 13)
