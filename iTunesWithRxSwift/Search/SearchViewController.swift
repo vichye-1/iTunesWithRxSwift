@@ -76,6 +76,6 @@ extension SearchViewController: BaseProtocol {
         
         tableView.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
         tableView.backgroundColor = .systemGray
-        tableView.rowHeight = 120
+        tableView.rowHeight = view.frame.height / 3
     }
 }
