@@ -21,4 +21,5 @@ struct iTunesResult: Decodable {
     let sellerName: String
     let averageUserRating: Float?
     let version: String
+    let releaseNotes: String
 }

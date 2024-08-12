@@ -17,6 +17,10 @@ final class DetailViewController: UIViewController {
     var appTitle: String?
     var companyName: String?
     var version: String?
+    var releaseNote: String?
+    
+    private let scrollView = UIScrollView()
+    private let contentView = UIView()
     
     private lazy var iconImageView = UIImageView()
     private let appTitleLabel = UILabel()
@@ -24,6 +28,7 @@ final class DetailViewController: UIViewController {
     private let downLoadButton = UIButton()
     private let newNewsLabel = UILabel()
     private let versionLabel = UILabel()
+    private let releaseNoteLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,10 +41,19 @@ final class DetailViewController: UIViewController {
 
 extension DetailViewController: BaseProtocol {
     func configureHierarchy() {
-        [iconImageView, appTitleLabel, companyLabel, downLoadButton, newNewsLabel, versionLabel].forEach { view.addSubview($0) }
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        [iconImageView, appTitleLabel, companyLabel, downLoadButton, newNewsLabel, versionLabel, releaseNoteLabel].forEach { contentView.addSubview($0) }
     }
     
     func configureLayout() {
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        contentView.snp.makeConstraints { make in
+            make.edges.equalTo(scrollView.contentLayoutGuide)
+            make.width.equalTo(scrollView.frameLayoutGuide)
+        }
         iconImageView.snp.makeConstraints { make in
             make.top.leading.equalTo(view.safeAreaLayoutGuide).inset(16)
             make.size.equalTo(100)
@@ -71,6 +85,11 @@ extension DetailViewController: BaseProtocol {
             make.height.equalTo(24)
             make.trailing.equalTo(newNewsLabel)
         }
+        releaseNoteLabel.snp.makeConstraints { make in
+            make.top.equalTo(versionLabel.snp.bottom).offset(10)
+            make.leading.equalTo(iconImageView)
+            make.bottom.equalToSuperview().inset(8)
+        }
     }
     
     func configureUI() {
@@ -97,6 +116,8 @@ extension DetailViewController: BaseProtocol {
         versionLabel.font = .systemFont(ofSize: 13)
         versionLabel.textColor = .lightGray
         versionLabel.textAlignment = .left
+        
+        releaseNoteLabel.numberOfLines = 0
     }
     
     private func putOnData() {
@@ -106,6 +127,7 @@ extension DetailViewController: BaseProtocol {
         appTitleLabel.text = appTitle
         companyLabel.text = companyName
         versionLabel.text = "버전 \(version ?? "0")"
+        releaseNoteLabel.text = releaseNote
     }
     
     

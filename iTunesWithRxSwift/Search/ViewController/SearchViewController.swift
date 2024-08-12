@@ -52,6 +52,7 @@ final class SearchViewController: UIViewController {
         detailVC.appTitle = item.trackName
         detailVC.companyName = item.sellerName
         detailVC.version = item.version
+        detailVC.releaseNote = item.releaseNotes
         
         navigationController?.pushViewController(detailVC, animated: true)
     }
