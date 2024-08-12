@@ -29,6 +29,20 @@ final class DetailViewController: UIViewController {
     private let newNewsLabel = UILabel()
     private let versionLabel = UILabel()
     private let releaseNoteLabel = UILabel()
+    private let imageCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let itemWidth = UIScreen.main.bounds.width * 0.8
+        layout.itemSize = CGSize(width: itemWidth, height: 200)
+        layout.minimumLineSpacing = 10
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.isPagingEnabled = false
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
+    }()
+    
+    //private let viewModel: DetailViewModel
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +50,11 @@ final class DetailViewController: UIViewController {
         configureLayout()
         configureUI()
         putOnData()
+        bind()
+    }
+    
+    private func bind() {
+        
     }
 }
 
@@ -43,7 +62,7 @@ extension DetailViewController: BaseProtocol {
     func configureHierarchy() {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        [iconImageView, appTitleLabel, companyLabel, downLoadButton, newNewsLabel, versionLabel, releaseNoteLabel].forEach { contentView.addSubview($0) }
+        [iconImageView, appTitleLabel, companyLabel, downLoadButton, newNewsLabel, versionLabel, releaseNoteLabel, imageCollectionView].forEach { contentView.addSubview($0) }
     }
     
     func configureLayout() {
@@ -89,6 +108,11 @@ extension DetailViewController: BaseProtocol {
             make.top.equalTo(versionLabel.snp.bottom).offset(10)
             make.leading.equalTo(iconImageView)
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(8)
+            //make.bottom.equalToSuperview().inset(8)
+        }
+        imageCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(releaseNoteLabel.snp.bottom).offset(8)
+            make.leading.equalTo(iconImageView)
             make.bottom.equalToSuperview().inset(8)
         }
     }
@@ -119,6 +143,8 @@ extension DetailViewController: BaseProtocol {
         
         releaseNoteLabel.numberOfLines = 0
         releaseNoteLabel.lineBreakMode = .byWordWrapping
+        
+        imageCollectionView.backgroundColor = .systemYellow
     }
     
     private func putOnData() {
@@ -130,6 +156,4 @@ extension DetailViewController: BaseProtocol {
         versionLabel.text = "버전 \(version ?? "0")"
         releaseNoteLabel.text = releaseNote
     }
-    
-    
 }

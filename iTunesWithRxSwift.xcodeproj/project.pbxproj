@@ -30,6 +30,8 @@
 		EFCB8D032C6659BB004E4C95 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */; };
 		EFCB8D052C685DBB004E4C95 /* UIButton.Configuration+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */; };
 		EFCB8D0D2C697D58004E4C95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */; };
+		EFCB8D142C6A1A9E004E4C95 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D132C6A1A9E004E4C95 /* DetailViewModel.swift */; };
+		EFCB8D162C6A1BB1004E4C95 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB8D152C6A1BB1004E4C95 /* ViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		EFCB8D022C6659BB004E4C95 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EFCB8D042C685DBB004E4C95 /* UIButton.Configuration+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton.Configuration+.swift"; sourceTree = "<group>"; };
 		EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EFCB8D132C6A1A9E004E4C95 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		EFCB8D152C6A1BB1004E4C95 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 				EFCB8CF12C65BA4E004E4C95 /* Constant */,
 				EFCB8CEB2C65B951004E4C95 /* Custom */,
 				EFCB8CE82C65B6A4004E4C95 /* Protocol */,
+				EFCB8D062C6908C9004E4C95 /* Model */,
 				EFCB8CD52C65AEE6004E4C95 /* Search */,
 				EFCB8D0B2C697D43004E4C95 /* Detail */,
 				EFCB8CBB2C65AC85004E4C95 /* AppDelegate.swift */,
@@ -114,7 +119,6 @@
 				EFCB8D092C6908E1004E4C95 /* ViewModel */,
 				EFCB8D082C6908D9004E4C95 /* Cell */,
 				EFCB8D072C6908D2004E4C95 /* ViewController */,
-				EFCB8D062C6908C9004E4C95 /* Model */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -124,6 +128,7 @@
 			children = (
 				EFCB8CE92C65B6B4004E4C95 /* BaseProtocol.swift */,
 				EFCB8CFB2C65E683004E4C95 /* ReuseIdentifierProtocol.swift */,
+				EFCB8D152C6A1BB1004E4C95 /* ViewModelProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				EFCB8D0C2C697D58004E4C95 /* DetailViewController.swift */,
+				EFCB8D132C6A1A9E004E4C95 /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -300,6 +306,8 @@
 				EFCB8D0D2C697D58004E4C95 /* DetailViewController.swift in Sources */,
 				EFCB8CEA2C65B6B4004E4C95 /* BaseProtocol.swift in Sources */,
 				EFCB8CBE2C65AC85004E4C95 /* SceneDelegate.swift in Sources */,
+				EFCB8D162C6A1BB1004E4C95 /* ViewModelProtocol.swift in Sources */,
+				EFCB8D142C6A1A9E004E4C95 /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
