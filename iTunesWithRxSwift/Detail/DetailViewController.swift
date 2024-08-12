@@ -88,13 +88,13 @@ extension DetailViewController: BaseProtocol {
         releaseNoteLabel.snp.makeConstraints { make in
             make.top.equalTo(versionLabel.snp.bottom).offset(10)
             make.leading.equalTo(iconImageView)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(8)
             make.bottom.equalToSuperview().inset(8)
         }
     }
     
     func configureUI() {
         view.backgroundColor = .white
-        
         iconImageView.backgroundColor = .systemYellow
         iconImageView.layer.cornerRadius = 8
         iconImageView.clipsToBounds = true
@@ -118,6 +118,7 @@ extension DetailViewController: BaseProtocol {
         versionLabel.textAlignment = .left
         
         releaseNoteLabel.numberOfLines = 0
+        releaseNoteLabel.lineBreakMode = .byWordWrapping
     }
     
     private func putOnData() {
