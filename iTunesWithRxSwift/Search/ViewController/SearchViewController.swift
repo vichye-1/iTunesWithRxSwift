@@ -51,6 +51,7 @@ final class SearchViewController: UIViewController {
         detailVC.iconImage = item.artworkUrl60
         detailVC.appTitle = item.trackName
         detailVC.companyName = item.sellerName
+        detailVC.version = item.version
         
         navigationController?.pushViewController(detailVC, animated: true)
     }

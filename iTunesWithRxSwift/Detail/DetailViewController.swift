@@ -16,11 +16,14 @@ final class DetailViewController: UIViewController {
     var iconImage: String?
     var appTitle: String?
     var companyName: String?
+    var version: String?
     
     private lazy var iconImageView = UIImageView()
     private let appTitleLabel = UILabel()
     private let companyLabel = UILabel()
     private let downLoadButton = UIButton()
+    private let newNewsLabel = UILabel()
+    private let versionLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,7 @@ final class DetailViewController: UIViewController {
 
 extension DetailViewController: BaseProtocol {
     func configureHierarchy() {
-        [iconImageView, appTitleLabel, companyLabel, downLoadButton].forEach { view.addSubview($0) }
+        [iconImageView, appTitleLabel, companyLabel, downLoadButton, newNewsLabel, versionLabel].forEach { view.addSubview($0) }
     }
     
     func configureLayout() {
@@ -56,6 +59,18 @@ extension DetailViewController: BaseProtocol {
             make.leading.equalTo(appTitleLabel)
             make.bottom.equalTo(iconImageView)
         }
+        newNewsLabel.snp.makeConstraints { make in
+            make.top.equalTo(iconImageView.snp.bottom).offset(20)
+            make.leading.equalTo(iconImageView)
+            make.height.equalTo(28)
+            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(8)
+        }
+        versionLabel.snp.makeConstraints { make in
+            make.top.equalTo(newNewsLabel.snp.bottom).offset(8)
+            make.leading.equalTo(iconImageView)
+            make.height.equalTo(24)
+            make.trailing.equalTo(newNewsLabel)
+        }
     }
     
     func configureUI() {
@@ -74,6 +89,14 @@ extension DetailViewController: BaseProtocol {
         companyLabel.textAlignment = .left
         
         downLoadButton.configuration = .download
+        
+        newNewsLabel.text = "새로운 소식"
+        newNewsLabel.font = .boldSystemFont(ofSize: 16)
+        newNewsLabel.textAlignment = .left
+        
+        versionLabel.font = .systemFont(ofSize: 13)
+        versionLabel.textColor = .lightGray
+        versionLabel.textAlignment = .left
     }
     
     private func putOnData() {
@@ -82,6 +105,7 @@ extension DetailViewController: BaseProtocol {
         }
         appTitleLabel.text = appTitle
         companyLabel.text = companyName
+        versionLabel.text = "버전 \(version ?? "0")"
     }
     
     
